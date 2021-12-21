@@ -11,9 +11,12 @@ export const getBooks = async() => {
     return books.data;
 };
 
-// export const getABook = async(id) => {
-//     const book = await client
-//         .from('books')
-//         .select();
-//     return book.data[id];
-// };
+export const getABook = async(id) => {
+    const book = await client
+        .from('books')
+        .select()
+        .match({ id: id })
+        .single();
+
+    return book.data;
+};
