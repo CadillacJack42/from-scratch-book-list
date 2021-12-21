@@ -10,3 +10,10 @@ export const getBooks = async() => {
         .select();
     return books.data;
 };
+
+// export const getABook = async(id) => {
+//     const book = await client
+//         .from('books')
+//         .select();
+//     return book.data[id];
+// };
