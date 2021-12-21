@@ -6,13 +6,16 @@ export const renderBooks = (books) => {
         const authorEl = document.createElement('p');
         const publisherEl = document.createElement('p');
         const isbnEl = document.createElement('p');
+        const iamgeEl = document.createElement('img');
 
         titleEl.textContent = book.title;
         authorEl.textContent = book.author;
         publisherEl.textContent = book.publisher;
         isbnEl.textContent = book.isbn;
+        iamgeEl.src = book.image;
+        iamgeEl.classList.add('images');
 
-        coverEl.append(titleEl, authorEl, publisherEl, isbnEl);
+        coverEl.append(titleEl, authorEl, publisherEl, isbnEl, iamgeEl);
 
         binding.append(coverEl);
     }
