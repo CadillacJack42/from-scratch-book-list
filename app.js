@@ -6,22 +6,20 @@ const bookShelf = document.getElementById('book-shelf');
 
 
 
-// let state
+window.addEventListener('load', async() => {
+    let allBooks = await getBooks();
+    const newBooks = renderBooks(allBooks);
+    bookShelf.append(newBooks);
+});
 
 // set event listeners 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
-const fetcher = async() => {
-    let allBooks = await getBooks();
-    console.log(allBooks);
-    const newBooks = renderBooks(allBooks);
-    bookShelf.append(newBooks);
+// const fetcher = async() => {
+//     let allBooks = await getBooks();
+//     const newBooks = renderBooks(allBooks);
+//     bookShelf.append(newBooks);
 
-};
-fetcher();
-
-
-
-
-console.log("I'm a book shelf");
+// };
+// fetcher();

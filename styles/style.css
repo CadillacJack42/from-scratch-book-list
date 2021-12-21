@@ -93,3 +93,11 @@ footer {
 .images {
     width: 200px;
 }
+
+.authors {
+    margin: 0px;
+}
+
+.book-cover {
+    margin-bottom: 20px;
+}
